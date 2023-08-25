@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZenPlaces</title>
+    <!-- Link de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- link de font awesome -->
+    <script src="https://kit.fontawesome.com/3947aef1e2.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="container-fluid">
+
+<%- include('navbar') %>
+
+
+<!-- Sección 1: Vista del perfil de la localidad-->
+<section class="row justify-content-evenly">
+  
+  <div class="col-12 text-center">
+    <h2>Esta es la página de perfil de: <%= resultTown[0].town_name %></h2>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img src="/images/towns/<%= resultTown[0].town_img %>" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h4 class="card-title"><%= resultTown[0].town_name %></h4>
+      <h5 class="card-title">Provincia de: <%= resultTown[0].province %></h6>
+      <h6 class="card-title">Email: <%= resultTown[0].email %></h6>
+      <h6 class="card-title"> <%= resultTown[0].description %></h6>
+      <h6 class="card-title">Télefono de contacto <%= resultTown[0].phone_number %></h6>
+      
+      
+      <a href="#" class="btn btn-success">Crear nuevo lugar de interés</a>
+    </div>
+  </div>
+  
+</section>
+
+<!-- Sección dedicada a los lugares emblemáticos de la localidad que se visita -->
+<section class="row text-center justify-content-evenly">
+
+  <div class="col-12">
+    <h2>Estos son los lugares emblemáticos de: <%= resultTown[0].town_name %></h2>
+  </div>
+
+  <!-- Va a ir un bucle forEach con los lugares emblematicos -->
+  <% resultPlace.forEach(( place ) => { %>
+    <div class="card" style="width: 18rem;">
+      
+      <div class="card-body">
+        <h4 class="card-title"><%= place.place_name %></h4>
+        <h5 class="card-title">Dirección: <%= place.address %></h5>
+        
+        <a href="#" class="btn btn-info">Editar</a>
+        <a href="#" class="btn btn-danger">Borrar</a>
+      </div>
+    </div>
+    <% }) %>
+
+</section>
+
+<%- include('footer') %>
