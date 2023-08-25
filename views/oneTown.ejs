@@ -52,7 +52,7 @@
         <h4 class="card-title"><%= place.place_name %></h4>
         <h5 class="card-title">Dirección: <%= place.address %></h5>
         
-        <a href="#" class="btn btn-info">Editar</a>
+        <a href="/places/editPlace/<%= place.id_place %>" class="btn btn-info">Editar</a>
         <a href="/places/deletePlaces/<%= place.id_town %>" class="btn btn-danger">Borrar</a>
       </div>
     </div>

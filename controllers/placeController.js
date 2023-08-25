@@ -40,6 +40,36 @@ class PlaceController {
     });
 
   }
+
+  //5.-get del formulario de edición de los lugares emblemáticos
+  editPlace = (req, res) => {
+
+    let {id_place} = req.params;
+    let sql = `SELECT * FROM place WHERE id_place = ${id_place}`;
+
+    connection.query(sql, (err, result) => {
+      if(err) throw err;
+      res.render('editPlace', {result});
+    });
+  }
+
+  //6.- post del formulario de edicion de los lugares emblemáticos
+  postEditPlace = (req, res) => {
+
+    let {id_place} = req.params;
+    let {place_name, address} = req.body;
+
+    let sql = `UPDATE place SET place_name = '${place_name}', address = '${address}' WHERE id_place = ${id_place}`
+
+    connection.query(sql, (err, result) => {
+      if (err) throw err;
+      res.render('editOK');
+
+    });
+    
+
+
+  }
 }
 
 module.exports = new PlaceController;

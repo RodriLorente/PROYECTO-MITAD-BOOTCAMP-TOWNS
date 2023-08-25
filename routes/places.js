@@ -18,6 +18,15 @@ router.get('/createNewPlace/:id_town', placeController.getNewPlace);
 //4.- Metodo post de formulario de creación de punto de interés en vista aparte.
 //misma ruta, distinto método
 
-router.post('/createNewPlace/:id_town', multer("places"), placeController.postNewPlace)
+router.post('/createNewPlace/:id_town', multer("places"), placeController.postNewPlace);
+
+//5.-get del formulario de edición de los lugares emblemáticos
+//http://localhost:3000/places/editPlace/:id_place
+router.get('/editPlace/:id_place', placeController.editPlace);
+
+//6.- post del formulario de edicion de los lugares emblemáticos
+//http://localhost:3000/places/editPlace/:id_place
+router.post('/editPlace/:id_place', placeController.postEditPlace);
+
 
 module.exports = router;
