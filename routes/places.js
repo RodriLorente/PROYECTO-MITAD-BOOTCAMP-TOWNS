@@ -1,9 +1,23 @@
 var express = require('express');
 var router = express.Router();
-const placeController = require('../controllers/placeController')
+const placeController = require('../controllers/placeController');
+const multer = require('../middlewares/multer');
 
-//http://localhost:3000/places
-router.get('/', placeController.viewPlaces);
 
+
+//2.- Endpoint para borrado de la BD de los lugares emblemáticos
+//http://localhost:3000/places/deletePlaces/:id_town
+
+// router.get('/deletePlaces/:id_town/:id_place', placeController.deletePlaces);
+
+//3.- Creación de un nuevo lugar emblemático en una vista aparte
+//http://localhost:3000/places/createNewPlace/:id_town
+
+router.get('/createNewPlace/:id_town', placeController.getNewPlace);
+
+//4.- Metodo post de formulario de creación de punto de interés en vista aparte.
+//misma ruta, distinto método
+
+router.post('/createNewPlace/:id_town', multer("places"), placeController.postNewPlace)
 
 module.exports = router;

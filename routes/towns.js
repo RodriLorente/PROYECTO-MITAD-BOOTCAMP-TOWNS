@@ -8,7 +8,7 @@ router.get('/', townController.viewTowns);
 
 //2.- Ruta para ver el formulario de creación de Localidades
 //http://localhost:3000/towns/createTown
-router.get('/createTown', townController.viewCreateTown)
+router.get('/createTown', townController.viewCreateTown);
 
 
 //3.- método post del formulario de creación de localidades
