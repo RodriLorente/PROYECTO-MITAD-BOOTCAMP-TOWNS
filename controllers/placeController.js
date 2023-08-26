@@ -3,9 +3,24 @@ const connection = require('../config/db');
 
 class PlaceController {
 
+  //2.- metodo para borrado de la BD de los lugares emblemáticos
 
+  deletePlaces = (req, res) => {
+    let {id_place} = req.params;
+    let sql = `DELETE FROM place WHERE id_place = ${id_place}`;
+
+    connection.query(sql, (err, result) =>{
+      if (err) throw err;
+      res.render('delOK');
+    })
+  }
+
+  //3.- Creación de un nuevo lugar emblemático en una vista aparte
   getNewPlace = (req, res) => {
-    let sql = `SELECT id_town, town_name FROM town WHERE town_is_deleted = 0`;
+    let {id_town} = req.params;
+    let sql = `SELECT town.*, place.* from town 
+    left join place on town.id_town = place.id_town
+    WHERE town.id_town = ${id_town}`;
 
     connection.query(sql, (err, result) => {
 
@@ -18,9 +33,10 @@ class PlaceController {
   postNewPlace = (req, res) => {
 
     
-    let {id_town, place_name, address} = req.body;
-    console.log(req.body);
-    console.log(req.params);
+    let {place_name, address} = req.body;
+
+    let {id_town} = req.params;
+    
     
     
     let img;

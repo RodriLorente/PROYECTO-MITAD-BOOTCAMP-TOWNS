@@ -49,17 +49,7 @@
             name="img"
             >
           </div>
-          <div class="mb-3">
-            <label for="town_name" class="form-label">Localidad a la que se añade el punto de interés</label>
-            <select class="form-select" aria-label="Default select example"
-            name="id_town">
-              <option selected>Elija localidad a la que corresponde</option>
-              
-              <% result.forEach(( town ) => { %>
-              <option value="<%= town.id_town %>"><%= town.town_name %></option>
-              <% }) %>
-            </select>
-          </div>
+          
           <div>
             <h5 class="text-danger"><%= typeof message != 'undefined' ? message : null %></h5>
           </div>
