@@ -1,0 +1,81 @@
+.section-index {
+  padding: 40vh 0vw;
+}
+
+.section-towns {
+  padding: 5vh 5vw;
+}
+
+.section-intro {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  padding-left: 50%;
+  padding-right: 5vw;
+}
+
+.pad-item {
+  padding-bottom: 10vh;
+  padding-right: 1vw;
+}
+
+.bg-main {
+  background-image: url("/images/fondos/fondo-main.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-intro {
+  background-image: url("/images/fondos/geisha-fondo.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+.main-beige {
+  background-color: #CAC2C1;
+}
+
+.footer-beige {
+  background-color: #9d9796;
+}
+
+.main-beige-text {
+  color: #CAC2C1;
+}
+
+.main-black {
+  background-color: #1A1C1C;
+}
+
+.main-black-text {
+  color: #1A1C1C;
+}
+
+.main-blue {
+  background-color: #626e77;
+}
+
+.foto img {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin: 0 auto;
+  transition: 0.3s ease;
+}
+.foto img:hover {
+  transform: scale(1.1);
+}
+.foto h4 {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.foto h4:hover {
+  opacity: 1;
+}
+.foto a {
+  color: #CAC2C1;
+  text-decoration: none;
+}/*# sourceMappingURL=general.css.map */

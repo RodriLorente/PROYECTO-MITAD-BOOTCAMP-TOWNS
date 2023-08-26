@@ -22,6 +22,7 @@ class PlaceController {
     left join place on town.id_town = place.id_town
     WHERE town.id_town = ${id_town}`;
 
+    
     connection.query(sql, (err, result) => {
 
       if(err) throw err;
@@ -46,6 +47,7 @@ class PlaceController {
 
     let sql = `INSERT INTO place (place_name, address, place_img, id_town) VALUES ('${place_name}', '${address}', '${img}', ${id_town})`;
 
+    
     
     connection.query(sql, (err, result) => {
 
