@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ZenPlaces</title>
+     
+     <!-- link de css de esta vista-->
+     <link rel="stylesheet" href="/stylesheets/oneTown.css">
     <!-- Link de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- link de font awesome -->
@@ -15,43 +18,46 @@
 
 
 <!-- Sección 1: Vista del perfil de la localidad-->
-<section class="row justify-content-evenly">
+<section class="row main-blue section-towns">
   
-  <div class="col-12 text-center">
-    <h2>Esta es la página de perfil de: <%= resultTown[0].town_name %></h2>
+  <div class="col-12 text-center main-beige-text">
+    <h2 class="pb-5">Esta es la página de perfil de: <%= resultTown[0].town_name %></h2>
   </div>
 
-  <div class="card" style="width: 18rem;">
-    <img src="/images/towns/<%= resultTown[0].town_img %>" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h4 class="card-title"><%= resultTown[0].town_name %></h4>
-      <h5 class="card-title">Provincia de: <%= resultTown[0].province %></h6>
-      <h6 class="card-title">Email: <%= resultTown[0].email %></h6>
-      <h6 class="card-title"> <%= resultTown[0].description %></h6>
-      <h6 class="card-title">Télefono de contacto <%= resultTown[0].phone_number %></h6>
-      
-      
-      <a href="/places/createNewPlace/<%= resultTown[0].id_town %>" class="btn btn-success">Crear nuevo lugar de interés</a>
-    </div>
+  <div class="col-6 my-auto foto">
+    <img src="/images/towns/<%= resultTown[0].town_img %>"  alt="...">
+    
+  </div>
+  <div class="col-6 my-auto cont-info">
+    <h2 class="p-3 main-beige-text"><%= resultTown[0].town_name %></h2>
+    <h5 class="p-3">Provincia de: <%= resultTown[0].province %></h6>
+    <h6 class="p-3">Email: <%= resultTown[0].email %></h6>
+    <h6 class="p-3 fst-italic">" <%= resultTown[0].description %> "</h6>
+    <h6 class="p-3">Télefono de contacto <%= resultTown[0].phone_number %></h6>
+    
+    
+    <a href="/places/createNewPlace/<%= resultTown[0].id_town %>">
+      <button class="boton ms-3">Crear nuevo lugar de interés</button>
+    </a>
   </div>
   
 </section>
 
 <!-- Sección dedicada a los lugares emblemáticos de la localidad que se visita -->
-<section class="row text-center justify-content-evenly">
+<section class="row text-center justify-content-evenly section-towns main-beige">
 
-  <div class="col-12">
-    <h2>Estos son los lugares emblemáticos de: <%= resultTown[0].town_name %></h2>
+  <div class="col-12 pb-5">
+    <h2>Lugares emblemáticos de: <%= resultTown[0].town_name %></h2>
   </div>
 
   <!-- Va a ir un bucle forEach con los lugares emblematicos -->
   <% resultPlace.forEach(( place ) => { %>
-    <div class="card" style="width: 18rem;">
+    <div class="card p-0" style="width: 32rem;">
       <img src="/images/places/<%= place.place_img %>" class="card-img-top" alt="...">
       
-      <div class="card-body">
-        <h4 class="card-title"><%= place.place_name %></h4>
-        <h5 class="card-title">Dirección: <%= place.address %></h5>
+      <div class="card-body main-blue rounded-bottom">
+        <h4 class="main-beige-text pb-2"><%= place.place_name %></h4>
+        <h5 class="main-beige-text pb-3"><span class="main-black-text">Dirección:</span> <%= place.address %></h5>
         
         <a href="/places/editPlace/<%= place.id_place %>" class="btn btn-info">Editar</a>
         <a href="/places/deletePlaces/<%= place.id_place %>" class="btn btn-danger">Borrar</a>

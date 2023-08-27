@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ZenPlaces</title>
+     <!-- link de esta vista -->
+     <link rel="stylesheet" href="/stylesheets/formCreatePlace.css">
+     <!-- mi link general de css -->
+     <link rel="stylesheet" href="/stylesheets/general.css">
     <!-- Link de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- link de font awesome -->
@@ -15,12 +19,13 @@
 
     <!-- Sección del Formulario de creación de la localidad -->
 
-    <section class="row">
+    <section class="row section-form bg-section-form">
       <div class="col-12">
         <form
         action="/places/createNewPlace/<%= result[0].id_town %>"
         method="post"
-        enctype="multipart/form-data">
+        enctype="multipart/form-data"
+        class="formulario main-beige-text">
           <div class="mb-3">
             <label for="place_name" class="form-label">Nombre del lugar emblemático</label>
             <input
@@ -51,14 +56,14 @@
           </div>
           
           <div>
-            <h5 class="text-danger"><%= typeof message != 'undefined' ? message : null %></h5>
+            <h5 class="msg"><%= typeof message != 'undefined' ? message : null %></h5>
           </div>
-          <button type="submit" class="btn btn-primary">Crear Punto de interés</button>
+          <button type="submit" class="boton">Crear Punto de interés</button>
         </form>
       </div>
-      <div class="col-12">
+      <div class="col-12 text-center">
         <a href="/">
-          <button class="btn btn-success">Volver a Inicio</button>
+          <button class="boton mt-5">Volver a Inicio</button>
         </a>
       </div>
     </section>

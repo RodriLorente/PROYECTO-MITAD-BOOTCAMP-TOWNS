@@ -23,15 +23,24 @@
   </div>
 </section>
 
-<!-- Sección 2: Vista de las localidades -->
-<section class="row section-towns main-blue">
+<!-- Sección explicativa del propósito de la web -->
+<section class="row section-intro bg-intro main-beige-text">
+  
+  <div class="col-12">
+    <h3 class="pb-3 main-beige-text">Nuestro objetivo:</h3>
+    <p class="main-beige-text fst-italic">"Descubre Japón a través de los ojos locales. Nuestra plataforma zen te conecta con auténticas joyas ocultas. Registra tu localidad y comparte su esencia única. Una experiencia enriquecedora que une culturas y fomenta la calma. Conéctate con el espíritu de Japón mientras exploras sus tesoros menos conocidos."</p>
+  </div>
+</section>
+
+<!-- Sección 3: Vista de las localidades -->
+<section class="row section-towns main-black">
   <div class="col-12 text-center">
-    <h2 class="main-beige-text">Descubre nuestra selección de localidades</h2>
+    <h2 class="main-beige-text pb-5">Descubre nuestra selección de localidades</h2>
   </div>
   <% result.forEach(( town ) => { %>
   <div class="col-12 col-md-6 col-xl-3 p-5 mx-auto">
     
-      <div class="foto mx-auto" style="width: 18rem;">
+      <div class="foto mx-auto">
     
           <a href="/towns/oneTown/<%= town.id_town %>">
             <img src="/images/towns/<%= town.town_img %>" alt="...">
@@ -43,14 +52,7 @@
   </div>
   <% }) %>
 </section>
-<!-- Sección explicativa del propósito de la web -->
-<section class="row section-intro bg-intro main-beige-text">
-  
-  <div class="col-12">
-    <h3 class="pb-3">Nuestro objetivo:</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi hic quod laudantium quas iusto, et eligendi optio perspiciatis exercitationem debitis. Delectus impedit omnis earum, mollitia totam temporibus quos voluptatem officiis at, incidunt assumenda fuga. Officiis et blanditiis laborum iure ad ipsa, laudantium exercitationem, dolores enim non sapiente labore optio corrupti.</p>
-  </div>
-</section>
+
 
 
 <%- include('footer') %>

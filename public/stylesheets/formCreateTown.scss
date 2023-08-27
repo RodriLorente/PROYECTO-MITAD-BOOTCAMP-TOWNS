@@ -1,0 +1,53 @@
+//import de los tipos
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;900&display=swap');
+
+*{
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+// Estilos para el formulario de creación de Localidades
+    //Padding de seccion 
+.section-form{
+  padding: 6vh 20vw;
+}
+    //Fondo de seccion 
+.bg-section-form{
+  background-image: linear-gradient(rgba(100, 84, 84, 0.5), rgba(110, 97, 97, 0.5)), url('/images/fondos/emblematic.jpeg');
+  background-position: center;
+  background-size: cover;
+
+}
+
+    //Estilos del propio formulario
+.formulario{
+  width: 60%;
+  margin: 0 auto;
+  background-color: #626e779c;
+  border-radius: 5px;
+  padding: 2vw;
+  
+  input{
+    width: 100%;
+  }
+  
+}
+
+.boton{
+  background-color: #CAC2C1;
+  border: solid #CAC2C1;
+  color: white;
+  border-radius: 5px;
+  
+  padding: 0.5vw;
+  transition: 0.5s ease;
+}
+.boton:hover{
+  background-color: #9d9796;
+  border: solid #9d9796;
+}
+
+    //Color del message 
+
+.msg{
+  color: #b16573;
+}

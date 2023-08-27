@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;900&display=swap");
+* {
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+.section-form {
+  padding: 23vh 20vw;
+}
+
+.bg-section-form {
+  background-image: linear-gradient(rgba(147, 112, 112, 0.5), rgba(161, 132, 132, 0.5)), url("/images/fondos/place.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+.formulario {
+  width: 60%;
+  margin: 0 auto;
+  background-color: rgba(98, 110, 119, 0.6117647059);
+  border-radius: 5px;
+  padding: 2vw;
+}
+.formulario input {
+  width: 100%;
+}
+
+.boton {
+  background-color: #CAC2C1;
+  border: solid #CAC2C1;
+  color: white;
+  border-radius: 5px;
+  padding: 0.5vw;
+  transition: 0.5s ease;
+}
+
+.boton:hover {
+  background-color: #9d9796;
+  border: solid #9d9796;
+}
+
+.msg {
+  color: #b16573;
+}/*# sourceMappingURL=formCreatePlace.css.map */
