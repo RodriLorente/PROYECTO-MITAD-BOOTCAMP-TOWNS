@@ -72,6 +72,20 @@
   border: solid #9d9796;
 }
 
+.boton2 {
+  background-color: #b16573;
+  border: solid #b16573;
+  color: white;
+  border-radius: 5px;
+  padding: 0.5vw;
+  transition: 0.5s ease;
+}
+
+.boton2:hover {
+  background-color: #7c4751;
+  border: solid #7c4751;
+}
+
 .cont-info {
   width: 80%;
   background-color: rgba(180, 190, 198, 0.5725490196);

@@ -62,6 +62,10 @@ class TownController {
   viewOneTown = (req, res) => {
 
     let {id_town} = req.params;
+    let message = "";
+    if(req.query.form == "error"){
+      message = "Los campos no pueden quedar vacíos"
+  }
     let sql = `SELECT * FROM town WHERE id_town = ${id_town}`;
     let sqlPlaces = `SELECT * FROM place WHERE id_town = ${id_town} AND place_is_deleted = 0`;
 
@@ -69,7 +73,7 @@ class TownController {
       if(err) throw err;
       connection.query(sqlPlaces, (err2, resultPlace) => {
         if(err2) throw err2;
-        res.render('oneTown', {resultTown, resultPlace});
+        res.render('oneTown', {resultTown, resultPlace, message});
 
       });
 

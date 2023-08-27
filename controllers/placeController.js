@@ -1,4 +1,4 @@
-const e = require('express');
+
 const connection = require('../config/db');
 
 class PlaceController {
@@ -39,7 +39,6 @@ class PlaceController {
     let {id_town} = req.params;
     
     
-    
     let img;
     if(req.file){
       img = req.file.filename;
@@ -47,7 +46,9 @@ class PlaceController {
 
     let sql = `INSERT INTO place (place_name, address, place_img, id_town) VALUES ('${place_name}', '${address}', '${img}', ${id_town})`;
 
-    
+    if(place_name == "" || address == "" || req.file == undefined){
+      return res.redirect(`/towns/oneTown/${id_town}?form=error`)
+  }
     
     connection.query(sql, (err, result) => {
 
