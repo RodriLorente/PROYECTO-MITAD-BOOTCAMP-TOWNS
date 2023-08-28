@@ -6,9 +6,9 @@ const multer = require('../middlewares/multer');
 
 
 //2.- Endpoint para borrado de la BD de los lugares emblemáticos
-//http://localhost:3000/places/deletePlaces/:id_place
+//http://localhost:3000/places/deletePlaces/:id_place/:id_town
 
-router.get('/deletePlaces/:id_place', placeController.deletePlaces);
+router.get('/deletePlaces/:id_place/:id_town', placeController.deletePlaces);
 
 //3.- Creación de un nuevo lugar emblemático en una vista aparte
 //http://localhost:3000/places/createNewPlace/:id_town
@@ -25,8 +25,8 @@ router.post('/createNewPlace/:id_town', multer("places"), placeController.postNe
 router.get('/editPlace/:id_place', placeController.editPlace);
 
 //6.- post del formulario de edicion de los lugares emblemáticos
-//http://localhost:3000/places/editPlace/:id_place
-router.post('/editPlace/:id_place', placeController.postEditPlace);
+//http://localhost:3000/places/editPlace/:id_place/:id_town
+router.post('/editPlace/:id_place/:id_town', placeController.postEditPlace);
 
 
 module.exports = router;

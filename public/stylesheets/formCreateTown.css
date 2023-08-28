@@ -40,4 +40,36 @@
 
 .msg {
   color: #b16573;
+}
+
+@media screen and (width <= 991px) {
+  .formulario {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(98, 110, 119, 0.6117647059);
+    border-radius: 5px;
+    padding: 2vw;
+  }
+  .formulario input {
+    width: 100%;
+  }
+  .formulario button {
+    margin: 2vh 0vw;
+    width: 100%;
+  }
+}
+@media screen and (width <= 575px) {
+  .formulario {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(98, 110, 119, 0.6117647059);
+    border-radius: 5px;
+    padding: 2vw;
+  }
+  .formulario input {
+    width: 100%;
+  }
+  .section-form {
+    padding: 6vh 5vw;
+  }
 }/*# sourceMappingURL=formCreateTown.css.map */

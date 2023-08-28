@@ -68,7 +68,7 @@
   .foto{
     
     img{
-      width: 90%;
+      width: 100%;
       margin: 0 auto;
       border-radius: 5px;
       object-fit: cover;
@@ -118,8 +118,93 @@
 
   //estilo para el div de la info
   .cont-info{
-    width: 80%;
+    width: 100%;
     background-color: #b4bec692;
     border-radius: 15px;
     padding: 5vh;
   }
+
+  // Estilos para el formulario de creación de Lugares de interés
+    //Padding de seccion 
+    .section-form{
+      padding-top: 15vh;
+      padding-left: 20vw;
+      padding-right: 20vw;
+      padding-bottom: 5vh;
+    }
+        //Fondo de seccion 
+    .bg-section-form{
+      background-image: linear-gradient(rgba(147, 112, 112, 0.5), rgba(161, 132, 132, 0.5)), url('/images/fondos/place.jpeg');
+      background-position: center;
+      background-size: cover;
+    
+    }
+    
+        //Estilos del propio formulario
+    .formulario{
+      width: 60%;
+      margin: 0 auto;
+      background-color: #626e779c;
+      border-radius: 5px;
+      padding: 2vw;
+      
+      input{
+        width: 100%;
+      }
+      
+    }
+    
+//Color del message 
+
+.msg{
+  color: #b16573;
+}
+    
+
+  //REPONSIVE
+//medias-queries
+
+//tablets
+@media screen and (width <= 991px){
+  
+  .cont-info{
+    margin-top: 4vh;
+    padding: 3vh;
+    button{
+      margin: 1vh;
+    }
+  }
+  
+  .card{
+    margin-bottom: 4vh;
+  }
+  .section-form{
+    padding-top: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 5vh;
+    .formulario{
+      width: 80%;
+    }
+  }
+  
+}
+//móviles
+@media screen and (width <= 575px){
+  .section-towns{
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .section-form{
+    padding-top: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 5vh;
+    .formulario{
+      width: 100%;
+    }
+  }
+  
+}

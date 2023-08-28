@@ -14,7 +14,6 @@
 }
 
 .formulario {
-  width: 60%;
   margin: 0 auto;
   background-color: rgba(98, 110, 119, 0.6117647059);
   border-radius: 5px;
@@ -40,4 +39,19 @@
 
 .msg {
   color: #b16573;
+}
+
+@media screen and (width <= 991px) {
+  .section-form {
+    padding: 29vh 15vw;
+  }
+  .section-form button {
+    margin: 2vh 0vw;
+    width: 100%;
+  }
+}
+@media screen and (width <= 575px) {
+  .section-form {
+    padding: 30vh 5vw;
+  }
 }/*# sourceMappingURL=editPlace.css.map */

@@ -51,3 +51,45 @@
 .msg{
   color: #b16573;
 }
+
+//REPONSIVE
+//medias-queries
+
+//tablets
+@media screen and (width <= 991px){
+  .formulario{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #626e779c;
+    border-radius: 5px;
+    padding: 2vw;
+    
+    input{
+      width: 100%;
+    }
+    button{
+      margin: 2vh 0vw;
+      width: 100%;
+    }
+    
+  }
+}
+//móviles
+@media screen and (width <= 575px){
+  .formulario{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #626e779c;
+    border-radius: 5px;
+    padding: 2vw;
+    
+    input{
+      width: 100%;
+    }
+    
+    
+  }
+  .section-form{
+    padding: 6vh 5vw;
+  }
+}

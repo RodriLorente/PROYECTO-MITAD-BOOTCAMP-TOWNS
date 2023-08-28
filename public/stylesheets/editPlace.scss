@@ -20,7 +20,7 @@
     
         //Estilos del propio formulario
     .formulario{
-      width: 60%;
+     
       margin: 0 auto;
       background-color: #626e779c;
       border-radius: 5px;
@@ -33,6 +33,7 @@
     }
     
     .boton{
+      
       background-color: #CAC2C1;
       border: solid #CAC2C1;
       color: white;
@@ -51,3 +52,26 @@
     .msg{
       color: #b16573;
     }
+
+//REPONSIVE
+//medias-queries
+
+//tablets
+@media screen and (width <= 991px){
+  .section-form{
+    padding: 29vh 15vw;
+    button{
+      margin: 2vh 0vw;
+      width: 100%;
+    }
+  }
+  
+  
+}
+//móviles
+@media screen and (width <= 575px){
+  .section-form{
+    padding: 30vh 5vw;
+  }
+  
+}

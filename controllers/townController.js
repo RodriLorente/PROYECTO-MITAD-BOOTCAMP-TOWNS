@@ -65,7 +65,7 @@ class TownController {
     let message = "";
     if(req.query.form == "error"){
       message = "Los campos no pueden quedar vacíos"
-  }
+    }
     let sql = `SELECT * FROM town WHERE id_town = ${id_town}`;
     let sqlPlaces = `SELECT * FROM place WHERE id_town = ${id_town} AND place_is_deleted = 0`;
 

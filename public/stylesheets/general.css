@@ -87,4 +87,29 @@
 .foto a {
   color: #CAC2C1;
   text-decoration: none;
+}
+
+@media screen and (width <= 991px) {
+  .foto img:hover {
+    transform: none;
+  }
+  .foto h4 {
+    opacity: 1;
+  }
+  .section-towns {
+    padding: 10vh 5vw;
+  }
+}
+@media screen and (width <= 575px) {
+  .section-intro {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .bg-intro {
+    background-image: linear-gradient(rgba(22, 21, 21, 0.804), rgba(8, 0, 0, 0.764)), url("/images/fondos/geisha-fondo.jpeg");
+    background-position: center;
+    background-size: cover;
+  }
 }/*# sourceMappingURL=general.css.map */

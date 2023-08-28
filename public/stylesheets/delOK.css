@@ -11,4 +11,18 @@
   background-image: linear-gradient(rgba(100, 84, 84, 0.5), rgba(110, 97, 97, 0.5)), url("/images/fondos/blurry.jpeg");
   background-position: center;
   background-size: cover;
+}
+
+.boton {
+  background-color: #CAC2C1;
+  border: solid #CAC2C1;
+  color: white;
+  border-radius: 5px;
+  padding: 0.5vw;
+  transition: 0.5s ease;
+}
+
+.boton:hover {
+  background-color: #9d9796;
+  border: solid #9d9796;
 }/*# sourceMappingURL=delOK.css.map */
