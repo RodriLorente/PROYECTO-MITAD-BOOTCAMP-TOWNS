@@ -55,4 +55,22 @@
       color: #b16573;
     }
 
+    //REPONSIVE
+//medias-queries
+
+//tablets
+@media screen and (width <= 991px){
+  .section-form{
+    padding: 20vh 5vw;
     
+  }
+  
+  
+}
+//móviles
+@media screen and (width <= 575px){
+  .section-form{
+    padding: 12vh 2vw;
+  }
+  
+}

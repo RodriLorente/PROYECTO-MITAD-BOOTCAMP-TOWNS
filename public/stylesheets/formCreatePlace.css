@@ -43,4 +43,15 @@
 
 .msg {
   color: #b16573;
+}
+
+@media screen and (width <= 991px) {
+  .section-form {
+    padding: 20vh 5vw;
+  }
+}
+@media screen and (width <= 575px) {
+  .section-form {
+    padding: 12vh 2vw;
+  }
 }/*# sourceMappingURL=formCreatePlace.css.map */
